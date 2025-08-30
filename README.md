@@ -5,8 +5,6 @@ It highlights my skills, projects, and a bit about me.
 
 ![Portfolio Screenshot](./portfolio-Phone.png)
 
----
-
 ## Features
 
 - Responsive design for desktop, tablet, and mobile
@@ -14,15 +12,11 @@ It highlights my skills, projects, and a bit about me.
 - Sections for **About Me**, **Skills**, **Projects**, and **Contact**
 - Easy navigation and smooth user experience
 
----
-
 ## Tech Stack
 
 - **Frontend**: React, Tailwind CSS
 - **Deployment**: Vercel
 - **Other Tools**: Figma
-
----
 
 ## Getting Started
 
