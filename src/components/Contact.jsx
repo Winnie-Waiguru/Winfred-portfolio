@@ -5,7 +5,7 @@ function Contact() {
         <h2 className="h2-style">Get in touch</h2>
         <div className="ml-3 h-[1px] border-0 bg-Primary w-[172px] md:w-[216px]"></div>
       </div>
-      <div className="mt-6 lg:w-1/2">
+      <div className="mt-6 lg:w-3/4">
         <p className="p-style">
           Curious to know more, see my resume, or collaborate on something
           amazing? Let’s connect. Contact me at: &nbsp;

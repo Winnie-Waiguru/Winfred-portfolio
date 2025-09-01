@@ -1,46 +1,100 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa";
 
 function NavBar() {
   const [isActive, setIsActive] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleSize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleSize);
+
+    return () => {
+      window.removeEventListener("resize", handleSize);
+    };
+  }, []);
 
   return (
-    <header className="font-Poppins">
-      <nav className="flex flex-row justify-between p-8 relative h-screen w-[320px] rounded-tr-2xl bg-white border border-gray-300">
-        <div>
+    <header className="font-Poppins md:mb-16">
+      {windowWidth > 768 ? (
+        // Desktop Menu
+        <nav className="fixed top-0 left-0 bg-white justify-between border-gray-300 px-10 flex flex-row w-full h-[64px] items-center">
+          {/* Logo */}
           <img
-            className={!isActive ? "hidden" : "block"}
             src="./winnie.png"
-            alt="winnie's logo"
+            alt="winfred's logo"
+            className="w-[56px] h-[32px]"
           />
-        </div>
-        <ul className="flex flex-col h-full w-full items-center absolute  top-20 left-0 py-10  md:flex-row font-bold gap-40 ml-auto">
-          <li className="list-items">
-            <a href="#">About</a>
-          </li>
-          <li className="list-items">
-            <a href="#">Projects</a>
-          </li>
-          <li className="list-items">
-            <a href="#">Contacts</a>
-          </li>
-        </ul>
-        <div>
+
+          {/* Menu Links */}
+          <ul className="flex flex-row w-1/2 justify-between gap-10 font-bold">
+            <li className="list-items">
+              <a href="#">About</a>
+            </li>
+            <li className="list-items">
+              <a href="#">Projects</a>
+            </li>
+            <li className="list-items">
+              <a href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      ) : (
+        <>
+          {/* Toggle button */}
           <button
-            className="md:hidden"
-            onClick={() => {
-              setIsActive((prevIsActive) => !prevIsActive);
-            }}
+            className="block md:hidden p-4 z-40"
+            onClick={() => setIsActive((prev) => !prev)}
           >
-            {!isActive ? (
-              <FaXmark className="icon" />
+            {isActive ? (
+              <FaXmark
+                className={`icon fixed top-8 left-68 transition-all duration-300 ease-in-out z-70 ${
+                  isActive
+                    ? "opacity-100 scale-100 rotate-0"
+                    : "opacity-0 scale-0 rotate-90"
+                }`}
+              />
             ) : (
               <FaBars className="icon" />
             )}
           </button>
-        </div>
-      </nav>
+
+          {/* Overlay */}
+          {isActive && (
+            <div
+              className="fixed inset-0 bg-black/40 z-30"
+              onClick={() => setIsActive(false)}
+            />
+          )}
+
+          {/* Side Menu */}
+          <nav
+            className={`fixed top-0 left-0 h-screen w-[320px] bg-white border-r border-gray-300 z-50 p-1 transform transition-transform duration-300 ease-in-out
+            ${isActive ? "translate-x-0" : "-translate-x-full"}`}
+          >
+            <img
+              src="./winnie.png"
+              alt="winfred's logo"
+              className="ml-4 my-7"
+            />
+            <ul className="flex flex-col items-center h-[420px] justify-between gap-10 font-bold">
+              <li className="list-items">
+                <a href="#">About</a>
+              </li>
+              <li className="list-items">
+                <a href="#">Projects</a>
+              </li>
+              <li className="list-items">
+                <a href="#">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </>
+      )}
     </header>
   );
 }

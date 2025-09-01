@@ -18,7 +18,7 @@ function Introduction() {
       <h2 className="text-Accent text-3xl md:text-[2.5rem] mb-6 mt-4 font-light font-Playfair">
         Frontend Developer
       </h2>
-      <p className="p-style mb-2 lg:w-1/2 ">
+      <p className="p-style mb-2 lg:w-3/4 ">
         I am based in Nairobi, Kenya. I build clean, responsive, and
         user-friendly websites. I bring designs to life through thoughtful code
         and a love for intuitive interfaces.

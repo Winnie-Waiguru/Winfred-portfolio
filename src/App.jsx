@@ -1,3 +1,4 @@
+import NavBar from "./components/NavBar";
 import Introduction from "./components/Introduction";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -7,6 +8,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="m-0 p-0 flex flex-col min-h-screen">
+      <NavBar />
       <main className="flex-grow">
         <Introduction />
         <About />

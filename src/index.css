@@ -14,7 +14,7 @@
 }
 
 .list-items {
-  @apply text-Primary md:hover:text-Secondary text-[18px] md:hover:text-[20px] w-full text-center py-4 hover:text-white hover:bg-Secondary hover:rounded-xl;
+  @apply text-Primary  hover:text-white hover:bg-Secondary md:hover:bg-white hover:rounded-xl md:hover:text-Secondary text-base md:hover:text-xl w-full text-center py-4 transition-all ease-in-out;
 }
 
 .icon {
@@ -22,7 +22,7 @@
 }
 
 .p-style {
-  @apply text-xl tracking-wide font-Poppins;
+  @apply text-base md:text-xl tracking-wide font-Poppins;
 }
 
 .section-style {

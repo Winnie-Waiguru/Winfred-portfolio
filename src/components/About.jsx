@@ -49,7 +49,9 @@ function About() {
             return (
               <li key={index} className="flex flex-col items-center">
                 <Icon className="secondary-icon" />
-                <p className="text-lg text-Primary">{skill.title}</p>
+                <p className="text-base md:text-lg text-Primary">
+                  {skill.title}
+                </p>
               </li>
             );
           })}
