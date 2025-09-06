@@ -2,6 +2,7 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { DiJavascript1 } from "react-icons/di";
+import { Link } from "react-router-dom";
 
 function Projects() {
   const projects = [
@@ -37,7 +38,7 @@ function Projects() {
     },
   ];
   return (
-    <section className="section-style">
+    <section id="projects" className="section-style">
       <div>
         <h2 className="h2-style">Projects</h2>
         <div className="ml-3 h-[1px] border-0 bg-Primary w-[112px] md:w-[142px]"></div>
@@ -64,12 +65,13 @@ function Projects() {
                   ))}
                 </ul>
                 <div className="flex flex-col gap-4  md:gap-10 md:flex-row">
-                  <a
+                  <Link
+                    to={`/projects/${project.id}`}
                     href={project.projectUrl}
                     className="text-Secondary underline text-base md:text-lg"
                   >
                     View Project
-                  </a>
+                  </Link>
                   <a
                     href={project.githubUrl}
                     className="text-Secondary underline text-base md:text-lg"

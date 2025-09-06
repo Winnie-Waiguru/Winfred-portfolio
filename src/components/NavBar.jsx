@@ -19,10 +19,10 @@ function NavBar() {
   }, []);
 
   return (
-    <header className="font-Poppins md:mb-16">
+    <header className="font-Poppins md:mb-32 ">
       {windowWidth > 768 ? (
         // Desktop Menu
-        <nav className="fixed top-0 left-0 bg-white justify-between border-gray-300 px-10 flex flex-row w-full h-[64px] items-center">
+        <nav className="fixed top-0 left-0 bg-white justify-between px-10 flex flex-row w-full h-[64px] items-center">
           {/* Logo */}
           <img
             src="./winnie.png"
@@ -33,13 +33,24 @@ function NavBar() {
           {/* Menu Links */}
           <ul className="flex flex-row w-1/2 justify-between gap-10 font-bold">
             <li className="list-items">
-              <a href="#">About</a>
+              <a href="#introduction" className="scroll-smooth">
+                Home
+              </a>
             </li>
             <li className="list-items">
-              <a href="#">Projects</a>
+              <a href="#about" className="scroll-smooth">
+                About
+              </a>
             </li>
             <li className="list-items">
-              <a href="#">Contacts</a>
+              <a href="#projects" className="scroll-smooth">
+                Projects
+              </a>
+            </li>
+            <li className="list-items">
+              <a href="#contact" className="scroll-smooth">
+                Contacts
+              </a>
             </li>
           </ul>
         </nav>
@@ -47,19 +58,19 @@ function NavBar() {
         <>
           {/* Toggle button */}
           <button
-            className="block md:hidden p-4 z-40"
+            className="block md:hidden p-4 z-40  "
             onClick={() => setIsActive((prev) => !prev)}
           >
             {isActive ? (
               <FaXmark
-                className={`icon fixed top-8 left-68 transition-all duration-300 ease-in-out z-70 ${
+                className={`icon fixed top-8 left-68  z-70 ${
                   isActive
                     ? "opacity-100 scale-100 rotate-0"
                     : "opacity-0 scale-0 rotate-90"
-                }`}
+                } transition-all duration-300 ease-in-out`}
               />
             ) : (
-              <FaBars className="icon" />
+              <FaBars className="icon fixed top-4 left-6 border-2 z-30  border-Accent shadow-2xl" />
             )}
           </button>
 
@@ -73,8 +84,10 @@ function NavBar() {
 
           {/* Side Menu */}
           <nav
-            className={`fixed top-0 left-0 h-screen w-[320px] bg-white border-r border-gray-300 z-50 p-1 transform transition-transform duration-300 ease-in-out
-            ${isActive ? "translate-x-0" : "-translate-x-full"}`}
+            className={`fixed top-0 left-0 h-screen w-[320px] bg-white border-r border-gray-300 z-50 p-1 
+            ${
+              isActive ? "translate-x-0" : "-translate-x-full"
+            } transform transition-transform duration-300 ease-in-out`}
           >
             <img
               src="./winnie.png"
@@ -82,14 +95,45 @@ function NavBar() {
               className="ml-4 my-7"
             />
             <ul className="flex flex-col items-center h-[420px] justify-between gap-10 font-bold">
-              <li className="list-items">
-                <a href="#">About</a>
+              <li
+                className="list-items"
+                onClick={() => {
+                  setIsActive(false);
+                }}
+              >
+                <a href="#introduction" className="smooth-scroll">
+                  Home
+                </a>
               </li>
-              <li className="list-items">
-                <a href="#">Projects</a>
+              <li
+                className="list-items"
+                onClick={() => {
+                  setIsActive(false);
+                }}
+              >
+                <a href="#about" className="smooth-scroll">
+                  About
+                </a>
               </li>
-              <li className="list-items">
-                <a href="#">Contacts</a>
+              <li
+                className="list-items"
+                onClick={() => {
+                  setIsActive(false);
+                }}
+              >
+                <a href="#projects" className="smooth-scroll">
+                  Projects
+                </a>
+              </li>
+              <li
+                className="list-items"
+                onClick={() => {
+                  setIsActive(false);
+                }}
+              >
+                <a href="#contact" className="smooth-scroll">
+                  Contacts
+                </a>
               </li>
             </ul>
           </nav>

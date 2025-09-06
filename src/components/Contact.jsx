@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section className="section-style mb-16">
+    <section id="contact" className="section-style mb-16">
       <div>
         <h2 className="h2-style">Get in touch</h2>
         <div className="ml-3 h-[1px] border-0 bg-Primary w-[172px] md:w-[216px]"></div>
