@@ -22,7 +22,7 @@ function NavBar() {
     <header className="font-Poppins md:mb-32 ">
       {windowWidth > 768 ? (
         // Desktop Menu
-        <nav className="fixed top-0 left-0 bg-white justify-between px-10 flex flex-row w-full h-[64px] items-center">
+        <nav className="fixed top-0 left-0 bg-white justify-between px-10 flex flex-row w-full h-[64px]  border-b border-gray-200/80 shadow-inner rounded-b-2xl mb-4 items-center">
           {/* Logo */}
           <img
             src="./winnie.png"
@@ -57,22 +57,24 @@ function NavBar() {
       ) : (
         <>
           {/* Toggle button */}
-          <button
-            className="block md:hidden p-4 z-40  "
-            onClick={() => setIsActive((prev) => !prev)}
-          >
-            {isActive ? (
-              <FaXmark
-                className={`icon fixed top-8 left-68  z-70 ${
-                  isActive
-                    ? "opacity-100 scale-100 rotate-0"
-                    : "opacity-0 scale-0 rotate-90"
-                } transition-all duration-300 ease-in-out`}
-              />
-            ) : (
-              <FaBars className="icon fixed top-4 left-6 border-2 z-30  border-Accent shadow-2xl" />
-            )}
-          </button>
+          <div className=" fixed top-0 left-0 w-full h-[64px] bg-white border-b border-gray-200/80 shadow-inner rounded-b-2xl mb-4">
+            <button
+              className="block md:hidden p-4 z-40  "
+              onClick={() => setIsActive((prev) => !prev)}
+            >
+              {isActive ? (
+                <FaXmark
+                  className={`icon fixed top-8 left-68 z-70 ${
+                    isActive
+                      ? "opacity-100 scale-100 rotate-0"
+                      : "opacity-0 scale-0 rotate-90"
+                  } transition-all duration-300 ease-in-out`}
+                />
+              ) : (
+                <FaBars className="icon fixed top-4 left-6 z-30" />
+              )}
+            </button>
+          </div>
 
           {/* Overlay */}
           {isActive && (

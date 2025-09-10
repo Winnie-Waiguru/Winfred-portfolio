@@ -26,7 +26,7 @@
 }
 
 .section-style {
-  @apply px-6 py-10 md:p-12 mt-8 font-Poppins tracking-wide leading-normal;
+  @apply px-6 pt-16 md:p-10 mt-8 font-Poppins tracking-wide leading-normal;
 }
 
 .h2-style {
@@ -35,6 +35,10 @@
 
 .h3-style {
   @apply text-2xl md:text-[2rem] font-Playfair text-Primary font-bold my-6;
+}
+
+.h3-project-style {
+  @apply text-Secondary text-xl font-bold;
 }
 
 .decoration-line {
