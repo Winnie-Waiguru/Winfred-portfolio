@@ -22,7 +22,10 @@ function NavBar() {
     <header className="font-Poppins md:mb-32 ">
       {windowWidth > 768 ? (
         // Desktop Menu
-        <nav className="fixed top-0 left-0 bg-white justify-between px-10 flex flex-row w-full h-[64px]  border-b border-gray-200/80 shadow-inner rounded-b-2xl mb-4 items-center">
+        <nav
+          aria-label="Main Navigation"
+          className="fixed top-0 left-0 bg-white justify-between px-10 flex flex-row w-full h-[64px]  border-b border-gray-200/80 shadow-inner rounded-b-2xl mb-4 items-center"
+        >
           {/* Logo */}
           <img
             src="./winnie.png"

@@ -1,89 +1,53 @@
-import { FaHtml5 } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { BiLogoTailwindCss } from "react-icons/bi";
-import { DiJavascript1 } from "react-icons/di";
+import { projects } from "../data/projectsData";
 import { Link } from "react-router-dom";
 
 function Projects() {
-  const projects = [
-    {
-      id: 1,
-      image: "./bookFinder-img.png",
-      title: "Book Finder",
-      description:
-        "Developed a book finder application that allows users to discover books they want to read and generate a personalized favorites listto share as recommendations with friends.",
-      stack: [FaHtml5, FaReact, BiLogoTailwindCss],
-      projectUrl: "/",
-      githubUrl: "https://github.com/Winnie-Waiguru/bookFinder-app.git",
-    },
-    {
-      id: 2,
-      image: "./meal-health-app.png",
-      title: "Meal Health App",
-      description:
-        "Developed a book finder application that allows users to discover books they want to read and generate a personalized favorites listto share as recommendations with friends.",
-      stack: [FaHtml5, FaReact, BiLogoTailwindCss, DiJavascript1],
-      projectUrl: "/",
-      githubUrl: "https://github.com/Winnie-Waiguru/bookFinder-app.git",
-    },
-    {
-      id: 3,
-      image: "./savannah -clone.png",
-      title: "Savannah Clone",
-      description:
-        "Developed a book finder application that allows users to discover books they want to read and generate a personalized favorites listto share as recommendations with friends.",
-      stack: [FaHtml5, FaReact, DiJavascript1],
-      projectUrl: "/",
-      githubUrl: "https://github.com/Winnie-Waiguru/bookFinder-app.git",
-    },
-  ];
   return (
-    <section id="projects" className="section-style">
+    <section
+      id="projects"
+      className="section-style"
+      aria-labelledby="projects-title"
+    >
       <div>
-        <h2 className="h2-style">Projects</h2>
+        <h2 id="projects-title" className="h2-style">
+          Projects
+        </h2>
         <div className="ml-3 h-[1px] border-0 bg-Primary w-[112px] md:w-[142px]"></div>
       </div>
-      <ul>
+      <div>
         {projects.map((project) => {
           const Icon = project.stack;
           return (
-            <li
-              key={project.id}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16"
-            >
+            <article key={project.id} className="project-container">
               <div className=" mt-4 md:mt-10">
-                <img src={project.image} alt={project.title} />
+                <img
+                  src={project.image}
+                  alt={`Screenshot of ${project.title}`}
+                />
               </div>
               <div>
                 <h3 className="h3-style ">{project.title}</h3>
                 <p className="p-style">{project.description}</p>
-                <ul className="grid grid-cols-3 my-6 gap-4">
+                <ul
+                  className="grid grid-cols-3 my-6 gap-4"
+                  aria-label="technologies used"
+                >
                   {project.stack.map((Icon, index) => (
                     <li key={index}>
-                      <Icon className="secondary-icon" />
+                      <Icon className="secondary-icon" aria-hidden="true" />
                     </li>
                   ))}
                 </ul>
-                <div className="flex flex-col gap-4  md:gap-10 md:flex-row">
-                  <Link
-                    to={`/projects/${project.id}`}
-                    href={project.projectUrl}
-                    className="text-Secondary underline text-base md:text-lg"
-                  >
+                <nav aria-label={`${project.title} project link`}>
+                  <Link to={`/projects/${project.id}`} className="view-link">
                     View Project
                   </Link>
-                  <a
-                    href={project.githubUrl}
-                    className="text-Secondary underline text-base md:text-lg"
-                  >
-                    View GitHub Repo
-                  </a>
-                </div>
+                </nav>
               </div>
-            </li>
+            </article>
           );
         })}
-      </ul>
+      </div>
     </section>
   );
 }

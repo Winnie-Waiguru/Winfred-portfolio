@@ -1,8 +1,14 @@
 function Contact() {
   return (
-    <section id="contact" className="section-style mb-16">
+    <section
+      id="contact"
+      className="section-style mb-16"
+      aria-labelledby="contact-title"
+    >
       <div>
-        <h2 className="h2-style">Get in touch</h2>
+        <h2 id="contact-title" className="h2-style">
+          Get in touch
+        </h2>
         <div className="ml-3 h-[1px] border-0 bg-Primary w-[172px] md:w-[216px]"></div>
       </div>
       <div className="mt-6 lg:w-3/4">

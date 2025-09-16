@@ -15,9 +15,11 @@ function About() {
     { icon: BiLogoTailwindCss, title: "Tailwindcss" },
   ];
   return (
-    <section id="about" className="section-style">
+    <section id="about" className="section-style" aria-labelledby="about-title">
       <div>
-        <h2 className="h2-style">About</h2>
+        <h2 id="about-title" className="h2-style">
+          About
+        </h2>
         <div className="decoration-line w-[78px] md:w-[100px]"></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 my-6 gap-10">

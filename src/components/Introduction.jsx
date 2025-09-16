@@ -3,14 +3,21 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Introduction() {
   return (
-    <section id="introduction" className="section-style">
+    <section
+      id="introduction"
+      className="section-style"
+      aria-labelledby="introduction-title"
+    >
       <div className="flex flex-row gap-1">
         <img
           className="w-[32px] h-[40px]"
           src="./hand-wave.png"
           alt="hand waving"
         />
-        <h1 className="text-[2rem] md:text-5xl font-Playfair">
+        <h1
+          id="introduction-title"
+          className="text-[2rem] md:text-5xl font-Playfair"
+        >
           Hello, I am
           <span className="text-Accent font-bold  "> Winfred Waiguru.</span>
         </h1>
