@@ -39,7 +39,10 @@ function Projects() {
                   ))}
                 </ul>
                 <nav aria-label={`${project.title} project link`}>
-                  <Link to={`/projects/${project.id}`} className="view-link">
+                  <Link
+                    to={`/projects/${project.id}`}
+                    className="focus-element view-link"
+                  >
                     View Project
                   </Link>
                 </nav>

@@ -12,7 +12,7 @@ function Introduction() {
         <img
           className="w-[32px] h-[40px]"
           src="./hand-wave.png"
-          alt="hand waving"
+          alt="hand waving emoji"
         />
         <h1
           id="introduction-title"
@@ -36,7 +36,7 @@ function Introduction() {
           href="https://www.linkedin.com/in/winfred-waiguru/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex gap-1"
+          className="focus-element flex gap-1"
         >
           <FaLinkedin className="icon" />
           LinkedIn
@@ -45,7 +45,7 @@ function Introduction() {
           href="https://github.com/Winnie-Waiguru"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex gap-1 "
+          className="focus-element flex gap-1 "
         >
           <FaGithub className="icon" />
           GitHub

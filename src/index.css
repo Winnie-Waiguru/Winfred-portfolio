@@ -56,3 +56,7 @@
 .project-container {
   @apply grid grid-cols-1 md:grid-cols-2 gap-6 mt-16;
 }
+
+.focus-element {
+  @apply focus:outline-2 focus:outline-Accent focus:ring-offset-2;
+}
