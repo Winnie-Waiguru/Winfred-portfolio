@@ -36,19 +36,19 @@ function Introduction() {
           href="https://www.linkedin.com/in/winfred-waiguru/"
           target="_blank"
           rel="noopener noreferrer"
-          className="focus-element flex gap-1"
+          className="focus-element flex gap-1 view-link"
         >
           <FaLinkedin className="icon" />
-          LinkedIn
+          LinkedIn Profile
         </a>
         <a
           href="https://github.com/Winnie-Waiguru"
           target="_blank"
           rel="noopener noreferrer"
-          className="focus-element flex gap-1 "
+          className="focus-element flex gap-1 view-link"
         >
           <FaGithub className="icon" />
-          GitHub
+          GitHub Portfolio
         </a>
       </div>
     </section>

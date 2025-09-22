@@ -13,13 +13,13 @@ function Contact() {
       </div>
       <div className="mt-6 lg:w-3/4">
         <p className="p-style">
-          Curious to know more, see my resume, or collaborate on something
-          amazing? Let’s connect. Contact me at: &nbsp;
+          Want to know more, check out my resume, or collaborate on something
+          amazing? Let’s connect. Reach me at &nbsp;
           <a
             href="mailto:winniewaiguru@gmail.com?subject=Collaboration%20Opportunity&body=Hi%20Winfred,%0D%0A%0D%0AI’d%20like%20to%20connect..."
             className="focus-element text-Secondary underline decoration-1"
           >
-            Winfred's Gmail
+            Winfred Waiguru Email
           </a>
         </p>
       </div>

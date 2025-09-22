@@ -58,5 +58,5 @@
 }
 
 .focus-element {
-  @apply focus:outline-2 focus:outline-Accent focus:ring-offset-2;
+  @apply focus-visible:outline-2 focus-visible:outline-Accent;
 }

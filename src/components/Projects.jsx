@@ -22,7 +22,7 @@ function Projects() {
               <div className=" mt-4 md:mt-10">
                 <img
                   src={project.image}
-                  alt={`Screenshot of ${project.title}`}
+                  alt={`Screenshot of ${project.title} application`}
                 />
               </div>
               <div>
@@ -42,6 +42,7 @@ function Projects() {
                   <Link
                     to={`/projects/${project.id}`}
                     className="focus-element view-link"
+                    aria-label={`View project: ${project.title}`}
                   >
                     View Project
                   </Link>
