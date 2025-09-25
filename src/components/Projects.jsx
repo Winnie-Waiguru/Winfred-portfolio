@@ -21,8 +21,14 @@ function Projects() {
             <article key={project.id} className="project-container">
               <div className=" mt-4 md:mt-10">
                 <img
-                  src={project.image}
+                  src={project.image.alternate}
                   alt={`Screenshot of ${project.title} application`}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  className="w-full md:w-4/5 h-auto"
+                  srcSet={`${project.image.small} 480w, ${project.image.medium} 800w`}
+                  sizes="(max-width: 600px) 480px, (max-width: 1024px) 800px, 800px"
                 />
               </div>
               <div>

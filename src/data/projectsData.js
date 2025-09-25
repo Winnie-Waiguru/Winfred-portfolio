@@ -6,7 +6,11 @@ import { DiJavascript1 } from "react-icons/di";
 export const projects = [
   {
     id: 1,
-    image: "/bookFinder-img.png",
+    image: {
+      small: "/bookFinder-small.webp",
+      medium: "/bookFinder-medium.webp",
+      alternate: "/bookFinder-img.png",
+    },
     title: "Book Finder",
     description:
       "Developed a book finder application that allows users to discover books they want to read and generate a personalized favorites listto share as recommendations with friends.",
@@ -15,7 +19,11 @@ export const projects = [
   },
   {
     id: 2,
-    image: "/meal-health-app.png",
+    image: {
+      small: "/meal-health-app-small.webp",
+      medium: "/meal-health-app-medium.webp",
+      alternate: "/meal-health-app.png",
+    },
     title: "Meal Health App",
     description:
       "Developed a book finder application that allows users to discover books they want to read and generate a personalized favorites listto share as recommendations with friends.",
@@ -24,7 +32,12 @@ export const projects = [
   },
   {
     id: 3,
-    image: "/savannah -clone.png",
+
+    image: {
+      small: "/savannah-clone-small.webp",
+      medium: "/savannah-clone-medium.webp",
+      alternate: "/savannah-clone.png",
+    },
     title: "Savannah Clone",
     description:
       "Developed a book finder application that allows users to discover books they want to read and generate a personalized favorites listto share as recommendations with friends.",
