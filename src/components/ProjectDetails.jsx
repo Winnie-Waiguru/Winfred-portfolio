@@ -9,32 +9,45 @@ function ProjectDetails() {
 
   console.log(projectId);
   return (
-    <section className="section-style">
+    <section className="section-style" aria-labelledby="page-title">
       <div className="flex flex-col gap-2 font-Poppins">
         <div className="flex flex-row gap-10 mb-10 items-center">
-          <button onClick={() => navigate(-1)}>
-            <FaArrowLeft className="icon" />
+          <button
+            aria-label="Go back to previous page"
+            onClick={() => navigate(-1)}
+          >
+            <FaArrowLeft className="icon focus-element " aria-hidden="true" />
           </button>
-          <h1 className="text-3xl text-Secondary font-Playfair font-bold ">
+          <h1
+            id="page-title"
+            className="text-3xl text-Secondary font-Playfair font-bold "
+          >
             Book Finder
           </h1>
         </div>
 
         <img
           src="/bookFinder-img.png"
-          alt="Book Finder screenshot"
+          alt="Book Finder project"
           className="md:w-3/4 mx-auto"
         />
+
         <div className="flex flex-row justify-between my-6">
-          <h4 className="text-Secondary underline text-base md:text-lg">
+          <a
+            className="text-Secondary underline text-base md:text-lg focus-element"
+            aria-label="View live project"
+          >
             Live View
-          </h4>
-          <h4 className="text-Secondary underline text-base md:text-lg">
+          </a>
+          <a
+            className="text-Secondary underline text-base md:text-lg focus-element"
+            aria-label="View live project"
+          >
             GitHub
-          </h4>
+          </a>
         </div>
 
-        <h3 className="h3-project-style">Overview</h3>
+        <h2 className="h3-style">Overview</h2>
         <p className="p-style">
           The Book Tracker App is a personal reading assistant designed to help
           users keep track of books they’ve read, manage a list of books they
@@ -42,17 +55,17 @@ function ProjectDetails() {
           It’s built with **React** and designed with a clean, user-friendly
           interface.
         </p>
-        <h3 className="h3-project-style">Tech Stack</h3>
+        <h2 className="h3-style">Tech Stack</h2>
         <ul>
           <li>**Frontend:** React, CSS (or Tailwind CSS)</li>
           <li>**Other Tools:** Git, GitHub, API</li>
         </ul>
-        <h3 className="h3-project-style">Challenges & Solutions</h3>
+        <h2 className="h3-style">Challenges & Solutions</h2>
         <p className="p-style">
           **Challenge:** Managing state across multiple components **Solution:**
           Implemented React Context API to handle global state more efficiently.
         </p>
-        <h3 className="h3-project-style"> Learning & Takeaways</h3>
+        <h2 className="h3-style"> Learning & Takeaways</h2>
         <ul>
           <li>
             Improved knowledge of **React Hooks** and component architecture

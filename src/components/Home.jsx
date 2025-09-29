@@ -1,10 +1,12 @@
+import { lazy, Suspense } from "react";
+import { FocusTrap } from "focus-trap-react";
 import NavBar from "./NavBar";
 import Introduction from "./Introduction";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
 import Footer from "./Footer";
-import { FocusTrap } from "focus-trap-react";
+
+const LazyAbout = lazy(() => import("./About"));
+const LazyProjects = lazy(() => import("./Projects"));
+const LazyContact = lazy(() => import("./Contact"));
 
 function Home() {
   return (
@@ -13,9 +15,27 @@ function Home() {
         <NavBar />
         <main className="flex-grow">
           <Introduction />
-          <About />
-          <Projects />
-          <Contact />
+          <Suspense
+            fallback={
+              <div className="section-style">Loading About section...</div>
+            }
+          >
+            <LazyAbout />
+          </Suspense>
+          <Suspense
+            fallback={
+              <div className="section-style">Loading Projects section...</div>
+            }
+          >
+            <LazyProjects />
+          </Suspense>
+          <Suspense
+            fallback={
+              <div className="section-style">Loading Contact section...</div>
+            }
+          >
+            <LazyContact />
+          </Suspense>
         </main>
         <Footer />
       </div>

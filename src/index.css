@@ -3,14 +3,19 @@
 
 @theme {
   --font-Playfair: "Playfair Display", serif;
-  --font-Poppins: "Poppins", sans-serif;
+  --font-Poppins: "Poppins", ui-sans-serif, system-ui;
   --color-Primary: #333333;
   --color-Secondary: #1f3a93;
   --color-Accent: #ea580c;
   --color-Accent-light: #fff5ec;
   --color-Secondary-light: #8a9bb5;
-
   --font-h1-size: 2rem;
+}
+
+@layer base {
+  html {
+    @apply font-Poppins;
+  }
 }
 
 .list-items {
