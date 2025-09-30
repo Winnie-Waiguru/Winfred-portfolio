@@ -16,7 +16,6 @@ function Projects() {
       </div>
       <div>
         {projects.map((project) => {
-          const Icon = project.stack;
           return (
             <article key={project.id} className="project-container">
               <div className=" mt-4 md:mt-10">
@@ -33,12 +32,12 @@ function Projects() {
               </div>
               <div>
                 <h3 className="h3-style ">{project.title}</h3>
-                <p className="p-style">{project.description}</p>
+                <p className="p-style">{project.summary}</p>
                 <ul
                   className="grid grid-cols-3 my-6 gap-4"
                   aria-label="technologies used"
                 >
-                  {project.stack.map((Icon, index) => (
+                  {project.stackIcon.map((Icon, index) => (
                     <li key={index}>
                       <Icon className="secondary-icon" aria-hidden="true" />
                     </li>

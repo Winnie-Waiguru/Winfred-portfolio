@@ -22,7 +22,7 @@ function Introduction() {
       <div>
         <div className="flex flex-row gap-1">
           <picture>
-            <source srcSet="./hand-wave.webp" type="image/webp" />
+            <source srcSet="./hand-wave.webp" type="imagae/webp" />
             <img
               className="w-[32px] h-[40px]"
               src="./hand-wave.png"

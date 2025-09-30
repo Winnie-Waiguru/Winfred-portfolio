@@ -1,11 +1,12 @@
 import { FaArrowLeft } from "react-icons/fa";
-
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { projects } from "../data/projectsData";
 
 function ProjectDetails() {
   const { projectId } = useParams();
   const navigate = useNavigate();
+
+  const projectData = projects[projectId - 1];
 
   console.log(projectId);
   return (
@@ -22,24 +23,26 @@ function ProjectDetails() {
             id="page-title"
             className="text-3xl text-Secondary font-Playfair font-bold "
           >
-            Book Finder
+            {projectData.title}
           </h1>
         </div>
 
         <img
-          src="/bookFinder-img.png"
+          src={projectData.image.alternate}
           alt="Book Finder project"
-          className="md:w-3/4 mx-auto"
+          className="md:w-1/3 mx-auto"
         />
 
         <div className="flex flex-row justify-between my-6">
           <a
+            href={projectData.deploymentUrl}
             className="text-Secondary underline text-base md:text-lg focus-element"
             aria-label="View live project"
           >
             Live View
           </a>
           <a
+            href={projectData.gitHubUrl}
             className="text-Secondary underline text-base md:text-lg focus-element"
             aria-label="View live project"
           >
@@ -48,37 +51,15 @@ function ProjectDetails() {
         </div>
 
         <h2 className="h3-style">Overview</h2>
-        <p className="p-style">
-          The Book Tracker App is a personal reading assistant designed to help
-          users keep track of books they’ve read, manage a list of books they
-          want to read, store their favorites, and explore book recommendations.
-          It’s built with **React** and designed with a clean, user-friendly
-          interface.
-        </p>
+        <p className="p-style">{projectData.description}</p>
         <h2 className="h3-style">Tech Stack</h2>
-        <ul>
-          <li>**Frontend:** React, CSS (or Tailwind CSS)</li>
-          <li>**Other Tools:** Git, GitHub, API</li>
+        <ul className="p-style">
+          {projectData.techStack.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
-        <h2 className="h3-style">Challenges & Solutions</h2>
-        <p className="p-style">
-          **Challenge:** Managing state across multiple components **Solution:**
-          Implemented React Context API to handle global state more efficiently.
-        </p>
-        <h2 className="h3-style"> Learning & Takeaways</h2>
-        <ul>
-          <li>
-            Improved knowledge of **React Hooks** and component architecture
-          </li>
-          <li>
-            Learned how to create responsive layouts with
-            **Flexbox/Grid/Tailwind**
-          </li>
-          <li>
-            Strengthened problem-solving skills in debugging and state
-            management
-          </li>
-        </ul>
+        <h2 className="h3-style">Takeaways</h2>
+        <p className="p-style">{projectData.learnings}</p>
       </div>
     </section>
   );
