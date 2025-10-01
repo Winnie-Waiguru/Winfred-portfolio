@@ -6,7 +6,9 @@ function ProjectDetails() {
   const { projectId } = useParams();
   const navigate = useNavigate();
 
-  const projectData = projects[projectId - 1];
+  const projectData = projects.find(
+    (project) => project.id === Number(projectId)
+  );
 
   console.log(projectId);
   return (
@@ -34,15 +36,21 @@ function ProjectDetails() {
         />
 
         <div className="flex flex-row justify-between my-6">
-          <a
-            href={projectData.deploymentUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-Secondary underline text-base md:text-lg focus-element"
-            aria-label="View live project"
-          >
-            Live View
-          </a>
+          {projectData.deploymentUrl &&
+          projectData.deploymentUrl.trim !== "" ? (
+            <a
+              href={projectData.deploymentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-Secondary underline text-base md:text-lg focus-element"
+              aria-label="View live project"
+            >
+              Live View
+            </a>
+          ) : (
+            <span>Deployment Link Coming Soon</span>
+          )}
+
           <a
             href={projectData.gitHubUrl}
             target="_blank"

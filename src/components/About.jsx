@@ -22,14 +22,16 @@ function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 my-6 gap-10">
         <div>
           <p className="p-style">
-            With a Bachelor of Science in Information Technology and ongoing
-            training in front-end development through ALX, I’m steadily
+            With a Bachelor of Science in Information Technology and hands-on
+            training in front-end development through ALX, I am continuously
             sharpening my skills and expanding my creative toolkit. What excites
-            me most is the process of creating, learning, and exploring. My
-            approach to development is deeply influenced by my love for
-            aesthetics and visual storytelling. Outside of tech, I enjoy
-            curating beautiful styling outfits a passion that fuels my eye for
-            detail. The skills and tools I use to bring app designs to life.
+            me most is the process of creating, learning, and transforming ideas
+            into digital experiences that truly connect with people. <br />
+            <br />
+            My approach to development is guided by a passion for aesthetics and
+            visual storytelling. From semantic HTML and CSS to modern frameworks
+            like React and Tailwind CSS.The skills and tools I use to bring app
+            designs to life are:
             <picture>
               <source srcSet="./finger-down.webp" type="image/webp" />
               <img

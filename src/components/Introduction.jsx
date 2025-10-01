@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { TiDocumentText } from "react-icons/ti";
 
 function Introduction() {
   return (
@@ -66,6 +67,15 @@ function Introduction() {
           >
             <FaGithub className="icon" aria-hidden="true" />
             GitHub Portfolio
+          </a>
+          <a
+            href="https://docs.google.com/document/d/1xHmeauD9yv7Eg0mYuvry6t4WAqlmcENDOsWSG20-qu4/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-element flex gap-1 view-link"
+          >
+            <TiDocumentText className="icon" aria-hidden="true" />
+            Resume
           </a>
         </div>
       </div>
