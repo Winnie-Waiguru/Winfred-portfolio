@@ -32,6 +32,31 @@ export const projects = [
   {
     id: 2,
     image: {
+      small: "/chatroomazureai-small.webp",
+      medium: "/chatroomazureai-medium.webp",
+      alternate: "/chatroomazureai-alt.png",
+    },
+    title: "ChatRoomAzureAI",
+    summary:
+      "A real-time chat application extended with Google AI Studio integration and a Tailwind CSS UI redesign.",
+    description:
+      "ChatRoomAzureAI is a full-stack real-time chat application forked from an open-source project. I redesigned the UI with Tailwind CSS, integrated Google AI Studio API for AI-powered responses, and deployed the frontend and backend to production. The project supports role-based access, real-time messaging with Socket.io, private chats, and a mobile-responsive design.",
+    stackIcon: [FaReact, BiLogoTailwindCss],
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "Google AI Studio API",
+      "GitHub Pages",
+      "Render",
+    ],
+    deploymentUrl: "https://winnie-waiguru.github.io/ChatRoomAzureAI/",
+    gitHubUrl: "https://github.com/Winnie-Waiguru/ChatRoomAzureAI.git",
+    learnings:
+      "Through this project, I gained experience in integrating third-party AI APIs into existing applications, configuring environment variables for different environments (development vs production), and deploying full-stack applications with separate frontend and backend hosting services. I also strengthened my skills in UI/UX design using Tailwind CSS.",
+  },
+  {
+    id: 3,
+    image: {
       small: "/meal-health-app-small.webp",
       medium: "/meal-health-app-medium.webp",
       alternate: "/meal-health-app.png",
@@ -51,31 +76,5 @@ export const projects = [
     gitHubUrl: "/",
     learnings:
       "Through this project, I learned how to design and implement authentication and role-based access control in a web application, ensuring that users have secure and tailored access to features. I gained hands-on experience in creating RESTful API endpoints for user actions such as registration, login, and data retrieval, while also learning how to manage and query relational data in PostgreSQL. Working with EJS templates helped me understand how to integrate frontend views with backend logic to render dynamic content effectively. I also developed skills in managing user data securely, handling session persistence, and structuring a full-stack project from database schema design to UI presentation.",
-  },
-  {
-    id: 3,
-
-    image: {
-      small: "/savannah-clone-small.webp",
-      medium: "/savannah-clone-medium.webp",
-      alternate: "/savannah-clone.png",
-    },
-    title: "Savannah Clone",
-    summary:
-      "Developed a book finder application that allows users to discover books they want to read and generate a personalized favorites listto share as recommendations with friends.",
-    description:
-      "The Book Library Application is a web app that allows users to search for books using the Open Library API, view detailed information (such as title, author, cover, and description), favorite books, receive genre-based recommendations, and download a list of books they have read to share with friends.",
-    stackIcon: [FaReact, BiLogoTailwindCss],
-    techStack: [
-      "React",
-      "Open Library API",
-      "Tailwind CSS",
-      "Vercel (for deployment)",
-      "LocalStorage (for storing favorites)",
-    ],
-    deploymentUrl: "/",
-    gitHubUrl: "https://github.com/Winnie-Waiguru/savannah-form-redesign.git",
-    learnings:
-      "As a beginner frontend developer, I learned how to structure a project into components, work with APIs to fetch and display data dynamically, manage state in a React application, use localStorage to persist data without authentication, style an app using Tailwind CSS, and deploy a project to a live environment with Vercel.",
   },
 ];

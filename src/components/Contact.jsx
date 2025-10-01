@@ -16,10 +16,12 @@ function Contact() {
           Want to know more, check out my resume, or collaborate on something
           amazing? Let’s connect. Reach me at &nbsp;
           <a
-            href="mailto:winniewaiguru@gmail.com?subject=Collaboration%20Opportunity&body=Hi%20Winfred,%0D%0A%0D%0AI’d%20like%20to%20connect..."
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=winniewaiguru@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="focus-element text-Secondary underline decoration-1"
           >
-            Winfred Waiguru Email
+            Winfred Waiguru's Email
           </a>
         </p>
       </div>

@@ -30,12 +30,14 @@ function ProjectDetails() {
         <img
           src={projectData.image.alternate}
           alt="Book Finder project"
-          className="md:w-1/3 mx-auto"
+          className="md:w-2/3 mx-auto"
         />
 
         <div className="flex flex-row justify-between my-6">
           <a
             href={projectData.deploymentUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-Secondary underline text-base md:text-lg focus-element"
             aria-label="View live project"
           >
@@ -43,6 +45,8 @@ function ProjectDetails() {
           </a>
           <a
             href={projectData.gitHubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-Secondary underline text-base md:text-lg focus-element"
             aria-label="View live project"
           >
