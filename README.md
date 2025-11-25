@@ -3,7 +3,7 @@
 This is my personal portfolio website built with **React** and **Tailwind CSS**.  
 It highlights my skills, projects, and a bit about me.
 
-![Portfolio Screenshot](./portfolio-Phone.png)
+![Portfolio Screenshot](./public/portfolio-Phone.png)
 
 ## Features
 
@@ -27,7 +27,7 @@ To run this project locally:
 git clone https://github.com/Winnie-Waiguru/Winfred-portfolio.git
 
 # Navigate into the project directory
-cd  my-portfolio
+cd  Winfred-portfolio
 
 # Install dependencies
 npm install
